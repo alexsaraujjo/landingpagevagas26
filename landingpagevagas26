@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EstágioJá - Encontre seu estágio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <div class="logo">
+                <span>🎓</span>
+                Estágio<span>Já</span>
+            </div>
+
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#vagas">Vagas</a>
+                <a href="#cadastro">Cadastrar vaga</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="badge">
+                        🚀 Oportunidades para estudantes
+                    </span>
+
+                    <h1>
+                        Encontre o estágio
+                        <span>ideal para você.</span>
+                    </h1>
+
+                    <p>
+                        Conectamos estudantes e empresas em busca de
+                        novos talentos. Encontre sua próxima oportunidade
+                        profissional.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#vagas" class="btn primary">
+                            🔎 Ver vagas
+                        </a>
+
+                        <a href="#cadastro" class="btn secondary">
+                            + Cadastrar vaga
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="card-icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        Sua carreira começa aqui
+                    </h3>
+
+                    <p>
+                        Encontre oportunidades de estágio
+                        de diversas áreas e empresas.
+                    </p>
+
+                    <div class="stats">
+
+                        <div>
+                            <strong id="totalVagasHero">0</strong>
+                            <span>Vagas</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Online</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="beneficios">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>POR QUE USAR?</span>
+
+                    <h2>
+                        Tudo para começar sua carreira
+                    </h2>
+
+                </div>
+
+                <div class="beneficios-grid">
+
+                    <div class="beneficio">
+
+                        <div class="beneficio-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            Encontre oportunidades
+                        </h3>
+
+                        <p>
+                            Pesquise vagas de estágio de acordo
+                            com sua área de interesse.
+                        </p>
+
+                    </div>
+
+
+                    <div class="beneficio">
+
+                        <div class="beneficio-icon">
+                            🏢
+                        </div>
+
+                        <h3>
+                            Empresas
+                        </h3>
+
+                        <p>
+                            Divulgue suas vagas e encontre
+                            estudantes interessados.
+                        </p>
+
+                    </div>
+
+
+                    <div class="beneficio">
+
+                        <div class="beneficio-icon">
+                            🚀
+                        </div>
+
+                        <h3>
+                            Comece sua carreira
+                        </h3>
+
+                        <p>
+                            Dê o primeiro passo para construir
+                            sua experiência profissional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="vagas" id="vagas">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span>OPORTUNIDADES</span>
+
+                        <h2>
+                            Vagas de estágio
+                        </h2>
+
+                    </div>
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="pesquisa"
+                            placeholder="🔎 Pesquisar vaga..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Vaga</th>
+
+                                <th>Empresa</th>
+
+                                <th>Área</th>
+
+                                <th>Local</th>
+
+                                <th>Modalidade</th>
+
+                                <th>Bolsa</th>
+
+                                <th>Ação</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabelaVagas">
+
+
+                        </tbody>
+
+                    </table>
+
+
+                    <div id="semVagas" class="sem-vagas">
+
+                        <div>📭</div>
+
+                        <h3>Nenhuma vaga encontrada</h3>
+
+                        <p>
+                            Cadastre uma nova vaga ou tente outra pesquisa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="cadastro" id="cadastro">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>PARA EMPRESAS</span>
+
+                    <h2>
+                        Divulgue sua vaga
+                    </h2>
+
+                    <p>
+                        Preencha o formulário abaixo e sua oportunidade
+                        aparecerá automaticamente na lista de vagas.
+                    </p>
+
+                </div>
+
+
+                <form id="formVaga" class="formulario">
+
+                    <div class="form-grid">
+
+                        <div class="campo">
+
+                            <label for="empresa">
+                                Nome da empresa *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="empresa"
+                                placeholder="Ex.: Tech Solutions"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="titulo">
+                                Título da vaga *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="titulo"
+                                placeholder="Ex.: Estágio em Desenvolvimento"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="area">
+                                Área *
+                            </label>
+
+                            <select id="area" required>
+
+                                <option value="">
+                                    Selecione uma área
+                                </option>
+
+                                <option>Administração</option>
+                                <option>Contabilidade</option>
+                                <option>Design</option>
+                                <option>Direito</option>
+                                <option>Engenharia</option>
+                                <option>Marketing</option>
+                                <option>Recursos Humanos</option>
+                                <option>Tecnologia</option>
+                                <option>Vendas</option>
+                                <option>Outra</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="local">
+                                Localização *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="local"
+                                placeholder="Ex.: Fortaleza - CE"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="modalidade">
+                                Modalidade *
+                            </label>
+
+                            <select id="modalidade" required>
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option>Presencial</option>
+                                <option>Híbrido</option>
+                                <option>Remoto</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="bolsa">
+                                Bolsa-auxílio *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bolsa"
+                                placeholder="Ex.: R$ 1.200,00"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo campo-full">
+
+                            <label for="requisitos">
+                                Requisitos *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="requisitos"
+                                placeholder="Ex.: Cursando ADS, conhecimento em HTML e CSS"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="campo campo-full">
+
+                            <label for="descricao">
+                                Descrição da vaga
+                            </label>
+
+                            <textarea
+                                id="descricao"
+                                rows="5"
+                                placeholder="Descreva as atividades e informações da oportunidade..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="btn primary btn-submit">
+
+                        🚀 Publicar vaga
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="logo">
+                🎓 Estágio<span>Já</span>
+            </div>
+
+            <p>
+                Conectando estudantes às melhores oportunidades.
+            </p>
+
+            <p class="copyright">
+                © 2026 EstágioJá. Projeto acadêmico.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button class="fechar" id="fecharModal">
+                ×
+            </button>
+
+            <div id="detalhesVaga"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
